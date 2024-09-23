@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Text-to-SQL API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p, ul {
+            color: #666;
+        }
+        .endpoints {
+            margin-top: 20px;
+        }
+        .endpoint {
+            margin-bottom: 20px;
+        }
+        .endpoint span {
+            font-weight: bold;
+        }
+        .example {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .footer a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="https://github.com/SARTHAK2511/Text-to-SQL-App" target="_blank">GitHub Repository</a>
+        </div>
+        <h1>Welcome to the Text-to-SQL API</h1>
+        <p>This API allows you to convert natural language questions into SQL queries using advanced AI models.</p>
+        <div class="endpoints">
+            <h2>Available Endpoints:</h2>
+            <div class="endpoint">
+                <span>GET /train:</span> Initiates the training process for the model.
+                <ul>
+                    <li>Without parameters: Trains the model using the current database schema.</li>
+                    <li>With parameters (optional):
+                        <ul>
+                            <li>csv: The path to a CSV file for additional training data</li>
+                            <li>question: A specific question to train on</li>
+                            <li>sql: A SQL query to associate with a question</li>
+                            <li>ddl: A DDL statement to add to the training data</li>
+                            <li>documentation: Additional documentation to include in training</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="example">
+                    <h3>Examples:</h3>
+                    <code>GET /train</code>
+                    <p>This will train the model using the current database schema.</p>
+                    <code>GET /train?csv=path/to/your/file.csv</code>
+                    <p>This will train the model using both the database schema and the data from the specified CSV file.</p>
+                </div>
+            </div>
+            <div class="endpoint">
+                <span>POST /ask:</span> Accepts a question and returns the generated SQL query and results.
+                <div class="example">
+                    <h3>Example:</h3>
+                    <code>POST /ask</code>
+                    <p>Request body:</p>
+                    <pre><code>
+{
+    "question": "What is the total revenue for 2023?"
+}
+                    </code></pre>
+                    <p>This will return the generated SQL query and the results for the given question.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Created by Sarthak Bhatore ❤️ | <a href="https://www.linkedin.com/in/sarthak-bhatore-004aaa1ba/" target="_blank">LinkedIn Profile</a>
+        </div>
+    </div>
+</body>
+</html>
