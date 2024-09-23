@@ -3,13 +3,6 @@
 ## Project Overview
 This project implements an AI-powered SQL query generator that converts natural language questions into SQL queries. It utilizes advanced language models and vector stores to understand and process user queries efficiently.
 
-## Demo Video
-
-[Watch the AI-Powered SQL Query Generator Demo on Loom](https://www.dropbox.com/scl/fi/n6z3gy7h2pu26wkkcxtjd/Text-to-SQL.mp4?rlkey=a69gegnqrecbghqniqc76lo2g&st=h5i6kj0c&dl=0)
-
-[![AI-Powered SQL Query Generator Demo](https://path-to-your-thumbnail-image.jpg)](https://www.dropbox.com/scl/fi/n6z3gy7h2pu26wkkcxtjd/Text-to-SQL.mp4?rlkey=a69gegnqrecbghqniqc76lo2g&st=h5i6kj0c&dl=0)
-
-
 ## Tech Stack
 - **Language**: Python
 - **AI Model**: LLaMa 3 70B (via Groq API)
