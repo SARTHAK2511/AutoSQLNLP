@@ -1,0 +1,15 @@
+{
+    "path": "./chroma_db",
+    "embedding_function": "default",
+    "client": "persistent",
+    "collection_metadata": {
+        "description": "Metadata for collections",
+        "author": "Sarthak Bhatore"
+    },
+    "n_results": 10,
+    "n_results_sql": 5,
+    "n_results_documentation": 5,
+    "n_results_ddl": 5,
+    "n_results_csv": 5,
+    "api_key": "GROQ_API_KEY"
+}
